@@ -1,0 +1,24 @@
+First of all, before making tests the documentation been analysed to understand what the software is expected to perform. As the function of the software is to perform the basical operations of Addition, Substraction, Multiplication and Division have been tested thse simple operations.The results have been as expected.
+Though, while testing devision by 0 (zero), the Output has been wrong "Infinity". Would be better to inform the user that this kind of operation is impossible. 
+When using a float number if user by mistake uses "comma" instead of "dot" then the program gives ERROR. Maybe confusing for the users. 
+Multiplication of large numbers shows the values in Scentific notation, may also be difficult to comprehend for users. 
+In documentation was mentioned that the program makes priority of the operations, though if parenthesis are used the Output is ERROR. 
+Have been also tested other operations as "square", "root", "%" Output is ERROR
+While testing method "Calculate" have been written the following test with help of JUnit. 
+
+"import org.junit.Assert;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class CalculateTest {
+    Calculator Calculate;
+
+    @Test
+    public void testAddition() {
+        Calculator CalculateTest = new Calculator();
+        assertEquals(8, Calculator.Calculate("3,5","+"));
+
+    }
+}"
+The result has given the problem: 'Calculate(java.util.List<java.lang.Float>, java.util.List<java.lang.String>)' has private access in 'Calculator'. As preferable the unittest to be performed on the method that has a public acces. 
